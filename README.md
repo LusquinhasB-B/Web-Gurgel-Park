@@ -6,5 +6,5 @@ Python + Django
 
 HTML + CSS
 
-Arquitetura MVC
+
 
