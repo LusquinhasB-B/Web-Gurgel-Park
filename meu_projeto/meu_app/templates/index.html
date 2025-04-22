@@ -2,24 +2,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gurgel Parks Dash Vision</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}"">
+    <meta charset="UTF-8">
+    <title>{% block title %}Gurgel Park{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <span>Gurgel</span>
-      <span>Parks</span>
-      <span>Dash Vision</span>
-    </div>
-    <nav class="navbar">
-      <a href="#">Home</a>
-      <a href="#">Gurgel Park</a>
-      <a href="#">Vagas</a>
-      <a href="#">Sobre nós</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <span>Gurgel</span>
+            <span>Parks</span>
+            <span>Dash Vision</span>
+        </div>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="#">Sistema</a>
+            <a href="#">Vagas</a>
+            <a href="#">App</a>
+        </nav>
+    </header>
+    <!-- Aqui vai ficar a parte sobre a empresa -->
+    <main> 
+        <section class="bloco">       
+                <div class="texto">
+                    <h2 class="semititulos">Sobre a Gurgel Park</h2>
+                    <p> -> A Gurgel Park é uma empresa inovadora que oferece um sistema de gerenciamento de estacionamento eficiente e automatizado. </p>
+                    <p> -> Nosso objetivo é facilitar o controle das vagas, garantir um fluxo organizado de entrada e saída de veículos, e proporcionar um serviço de qualidade para nossos clientes.        
+                    </p>
+                </div>      
+                    <div class="imagem sobre-gurgel">1ºimagem aqui</div>
+             
+        </section>
+        <section class="bloco invertido">
+            <div class="texto">
+                <h2 class="semititulos">Sobre o sistema de vagas</h2>
+                <p> -> O sistema permite cadastrar e atualizar informações sobre as vagas de estacionamento, facilitando a administração das áreas de estacionamento. Além disso, o registro de entradas e saídas permite que a cada movimentação de veículos, o sistema registra as entradas e saídas, associando cada evento ao cliente correspondente. </p>
+                <p> ->Com a consulta e manutenção de dados dos clientes, o sistema oferece ferramentas para consultar e manter os dados dos clientes cadastrados, facilitando o gerenciamento das informações.</p>
+            </div>
+            <div class="imagem sobre-sistema"> 2ºimagem aqui</div>
+        </section>  
+        <section class="bloco">
+            <div class="texto">
+                <h2 class="semititulos">Sobre o aplicativo</h2>
+                <p> -> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, distinctio, laborum laboriosam deleniti tenetur, praesentium minima fuga suscipit enim aut illum reiciendis itaque corporis eius. Vel inventore ex exercitationem adipisci?</p>
+                <p> -> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, quod porro, esse, est repellat amet earum alias at ea officia aspernatur fugiat aliquid? Voluptatum assumenda quis architecto atque ea cumque.</p>
+            </div>
+            <div class="imagem sobre-aplicativo">3º imagem aqui</div>
+        </section>
+    </main>
+    <footer>
+        <div class="rodape">
+            <p>Todos os direitos reservados à Gurgel Park&copy</p>
+        </div>
+    </footer>
 </body>
 </html>
