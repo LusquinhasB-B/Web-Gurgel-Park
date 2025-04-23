@@ -76,6 +76,7 @@ main {
 
 p{
   text-align: justify;
+  color: #fdfde9;
 }
 
 .bloco{
@@ -100,7 +101,7 @@ p{
 }
 
 .sobre-gurgel{
-  background-image: url("depositphotos_25035765-stock-photo-underground-parking.jpg");
+  background-image: url("{% static 'logo_gurgel_park.png' %}");
 }
 .sobre-sistema{
   background-image: url('sistema-vagas.webp');
