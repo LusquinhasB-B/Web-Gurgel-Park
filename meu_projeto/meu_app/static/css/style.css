@@ -73,7 +73,20 @@ main {
 .navbar a:hover::after {
   background-color: #4d8041;
 }
-
+h1.saudacao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border-bottom: #4d8041 solid;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+h1.saudacao:hover{
+  transition: 2s;
+  background-color: #a4cfa0;
+  box-shadow: 6px 6px 2px 1px #000000
+}
 p{
   text-align: justify;
   color: #fdfde9;
@@ -101,7 +114,7 @@ p{
 }
 
 .sobre-gurgel{
-  background-image: url("{% static 'logo_gurgel_park.png' %}");
+  background-image: url("{% static '' %}");
 }
 .sobre-sistema{
   background-image: url('sistema-vagas.webp');
