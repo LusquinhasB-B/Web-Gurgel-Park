@@ -1,0 +1,52 @@
+body{
+    font-family: JetBrains Mono Medium;background-image: url("../img/fundo-estacionamento.jpg") ;
+    background-size: cover;
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #A3BC93;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #bcd2ae;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #a4cfa0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    font-family: JetBrains Mono Medium;
+  }
+  
+  form input[type="submit"] {
+    background-color: #4d8041;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #3b6534;
+  }
+  
