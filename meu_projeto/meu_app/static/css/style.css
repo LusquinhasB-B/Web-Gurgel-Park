@@ -1,7 +1,7 @@
 body{
   margin: 0;
-  font-family: 'JetBrains Mono Medium', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-  ;
+  background-size: cover;
+  font-family: 'JetBrains Mono Medium', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #fdfde9;
   color: #000;
 }
@@ -46,6 +46,15 @@ main {
   z-index: -1;
   border-radius: 3px;
 }
+span{
+border-radius: solid 2px #4d8041;
+
+}
+span:hover{
+  border-bottom: solid 1px #4d8041;
+
+
+}
 
 .navbar {
   display: flex;
@@ -77,7 +86,7 @@ h1.saudacao{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 3px;
   border-bottom: #4d8041 solid;
   margin-left: 35%;
   margin-right: 35%;
@@ -85,11 +94,11 @@ h1.saudacao{
 h1.saudacao:hover{
   transition: 2s;
   background-color: #a4cfa0;
-  box-shadow: 6px 6px 2px 1px #000000
+  box-shadow:  6px 6px 1px 1px #000000;
 }
-p{
+p .texto{
   text-align: justify;
-  color: #fdfde9;
+  color: #000000;
 }
 
 .bloco{
@@ -98,9 +107,14 @@ p{
   justify-content: space-between;
   padding: 10px;
   margin-right: auto;
+  margin-bottom: 2%;
 }
+
 .bloco.invertido{
   flex-direction: row-reverse;
+}
+.bloco.invertido.texto{
+  background-color: #182616;
 }
 .imagem{
     flex: 1;
@@ -114,20 +128,25 @@ p{
 }
 
 .sobre-gurgel{
-  background-image: url("{% static '' %}");
+  background-image: url("../fundo-estacionamento.jpg");
 }
 .sobre-sistema{
   background-image: url('sistema-vagas.webp');
 
 }
 .texto {
+  transition: 2s;
+  animation: alternate;
   flex: 1;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 20px;
   background-color: #A3BC93;
   border-radius: 10px;
-  box-shadow: 12px 12px 2px 1px #4d8041;
+  border: solid 2px #000000;
+}
+.texto:hover{
+  box-shadow: -12px 12px 2px 1px #000000;
 }
 
 .intro {
@@ -140,10 +159,11 @@ p{
 
 .rodape{
   display: flex;
-  position: relative;
+  position: fixed;
   padding-left: 35%;
   bottom: 0;
   width: 100%;
-  color: white;
+  color: rgb(255, 255, 255);
+  margin-top: 10%;
   background-color: #182616;
 }

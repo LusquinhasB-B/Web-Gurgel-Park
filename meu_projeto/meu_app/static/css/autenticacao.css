@@ -1,8 +1,15 @@
 body{
-    font-family: JetBrains Mono Medium;background-image: url("../img/fundo-estacionamento.jpg") ;
+    font-family: JetBrains Mono Medium;background-image: url("../img/verde-estacionamento.png") ;
     background-size: cover;
-}
+    
 
+}
+h1{
+  background-color: #7baf6f;
+  box-shadow: 10px 5px 0px black;
+  border-radius: 3px;
+  padding: 4px;
+}
 
 .formulario {
     display: flex;
@@ -10,11 +17,13 @@ body{
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    background-color: #A3BC93;
+    background-color: #a4cfa0;
     padding: 40px;
+    border: 1.5px solid #313f30;
     border-radius: 10px;
-    box-shadow: 0 0 15px #bcd2ae;
+    box-shadow: 10px 05px 15px #262e21;
     max-width: 400px;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -25,17 +34,18 @@ body{
     width: 100%;
     padding: 10px;
     margin: 8px 0;
-    border: 2px solid #a4cfa0;
+    border: 2px solid #313f30;
     border-radius: 8px;
     background-color: #f9f9f9;
     font-size: 1rem;
     font-family: JetBrains Mono Medium;
+    box-shadow: 10px 5px 0px black;
   }
   
   form input[type="submit"] {
-    background-color: #4d8041;
-    color: white;
-    border: none;
+    background-color: #7baf6f;
+    color: black;
+    border: 2px solid #313f30;
     padding: 12px;
     width: 100%;
     margin-top: 15px;
@@ -44,6 +54,7 @@ body{
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 10px 5px 0px black;
   }
   
   form input[type="submit"]:hover {

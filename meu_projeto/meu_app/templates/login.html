@@ -8,16 +8,17 @@
     <title>Login </title>
 </head>
 <body>
-    <div class="imagem"></div>
-    <main>    
+    <main> 
+          
         <div class="formulario">
             <h1>Login</h1>
-            <form action="{% url 'login' %}" method="GET">{% csrf_token %}        
+            <form action="{% url 'login' %}" method="POST">{% csrf_token %}        
                 <input type="text" placeholder="Usuario..." name="username"> <br>
                 <input type="password" placeholder="Senha" name="senha"> <br>
                 <input type="submit" value="ENTRAR">
             </form>
         </div>
+        <div class="imagem"></div> 
     </main>
 
 
