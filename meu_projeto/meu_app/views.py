@@ -61,6 +61,15 @@ def login(request):
         usuario = request.POST.get('username')
         senha = request.POST.get('senha')  
 
+        #---------------Ir para outras telas---------------#
+        irPrincipal = request.POST.get('irPagina')
+        irCadastro = request.POST.get('irCadastro')
+
+        if irPrincipal:
+            return redirect('/auth/pagina/')
+        if irCadastro:
+            return redirect('/auth/cadastro/')
+
         validacao = authenticate(username=usuario, password=senha)
 
         if validacao:
