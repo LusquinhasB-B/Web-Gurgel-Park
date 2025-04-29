@@ -1,7 +1,8 @@
+/* SEU CSS (com pequenos ajustes para melhor renderização) */
 body{
   margin: 0;
   background-size: cover;
-  font-family: 'JetBrains Mono Medium', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'JetBrains Mono Medium', 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: #fdfde9;
   color: #000;
 }
@@ -17,6 +18,7 @@ header{
 
 main { 
   padding: 10px;
+  margin-bottom: 60px; /* Evita conflito com o rodapé fixo */
 }
 
 .logo {
@@ -24,9 +26,6 @@ main {
   flex-direction: column;
   font-size: 2rem;
   font-weight: bold;
-  /* padding: 3px;
-  border-radius: 12px;
-  box-shadow:  12px 12px 14px 1px #467339; */
 }
 
 .logo span {
@@ -46,14 +45,6 @@ main {
   z-index: -1;
   border-radius: 3px;
 }
-span{
-border-radius: solid 2px #4d8041;
-
-}
-span:hover{
-  transition: 2s;
-  border-bottom: solid 1px #4d8041;
-}
 
 .navbar {
   display: flex;
@@ -65,7 +56,8 @@ span:hover{
   font-weight: bold;
   color: #000;
   position: relative;
-}
+  font-size: 1.1rem;
+} 
 
 .navbar a::after {
   content: '';
@@ -73,122 +65,122 @@ span:hover{
   bottom: -3px;
   left: 0;
   height: 3px;
-  width: 100%;
-  background-color: #a4cfa0;
-  transition: background-color 0.3s;
+  width: 0;
+  background-color: #4d8041;
+  transition: width 0.3s;
 }
 
 .navbar a:hover::after {
-  background-color: #4d8041;
+  width: 100%;
 }
-h1.saudacao{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3px;
+
+h1.saudacao {
   text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+  margin: 20px 35%;
   border-radius: 10px;
-  margin-left: 35%;
-  margin-right: 35%;
-}
-h1.saudacao:hover{
-  transition: 0.5s;
-  background-color: #a4cfa0;
-  box-shadow:  -8px 8px 2px 1px #182616;
-}
-p{
-  text-align: justify;
-  color: #000000;
-  text-align: justify;
-  font-size: large;
+  background-color: transparent;
+  transition: all 0.5s;
 }
 
-.bloco{
+h1.saudacao:hover {
+  background-color: #a4cfa0;
+  box-shadow: -8px 8px 2px 1px #182616;
+}
+
+.bloco {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  margin-right: auto;
-  margin-bottom: 2%;
-}
+  margin: 40px 10px;
+}   
 
-.bloco.invertido{
+.bloco.invertido {
   flex-direction: row-reverse;
 }
-.bloco.invertido.texto{
-  background-color: #182616;
-}
-.imagem{
-    flex: 1;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    border: 3px solid #000;
-    box-shadow: 0 0 10px #bcd2ae;
-    margin: 30px;
-}
-.imagem:hover{
-    transition: 2s;
-    border: 3px solid #000;
-    box-shadow: 7px 7px 10px #020202;
-}
 
-.sobre-gurgel{
-  background-image: url("../img/vista-aerea-estacionamento.png");
-  background-size: cover;
-  background-position: center;
-}
-.sobre-projeto{
-  background-image: url("../img/mao-aplicativo.jpeg");
-
-}
-.sobre-aplicativo{
-  background-image: url("../img/#");
-  background-size: cover;
-
-}
 .texto {
-  transition: 2s;
-  animation: alternate;
   flex: 1;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 20px;
+  padding: 25px;
+  margin: 0 20px;
   background-color: #a4cfa0;
   border-radius: 10px;
-  border: solid 2px #000000;
-  margin-left: 2%;
-  margin-right: 2%;
+  border: 2px dashed #000;
   box-shadow: -12px 12px 2px 1px #182616;
+  transition: transform 0.3s;
 }
-.texto:hover{
-}
-.semititulos{
-  margin-top: 2px;
-  padding: 2px;
-  border-bottom: solid 3px #4d8041;
-  
+p{
+  font-size: 20px;
+  text-align: justify;
 
 }
+.texto:hover {
+  transform: translateY(-5px);
+}
 
+.semititulos {
+  margin-top: 0;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #4d8041;
+  font-size: 1.8rem;
+}
 
-.intro {
-  background-color: #ffffffd6;
-  padding: 30px;
+.imagem {
+  flex: 1;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
+  border: 3px solid #000;
   box-shadow: 0 0 10px #bcd2ae;
+  margin: 0 20px;
+  transition: all 0.5s;
 }
 
-.rodape{
-  display: flex;
+.imagem:hover {
+  box-shadow: 7px 7px 10px #020202;
+  transform: scale(1.02);
+}
+
+.imagem.sobre-gurgel{
+  background-image: url("../img/fundo-estacionamento.jpg");
+}
+
+.imagem.sobre-projeto{
+  background-image: url("../img/codigo-imagem.png");
+}
+
+.imagem.sobre-aplicativo{
+  background-image: url("../img/mao-aplicativo.jpeg");
+}
+
+.rodape {
   position: fixed;
-  padding-left: 35%;
   bottom: 0;
   width: 100%;
-  margin-top: 10%;
   background-color: #182616;
+  padding: 15px 0;
+  text-align: center;
 }
-p.texto-rodape{
-  color: #fdfde9;
+
+.texto-rodape {
+  color: #fdfde9 !important;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bloco, .bloco.invertido {
+    flex-direction: column;
+  }
+  
+  .imagem {
+    width: 90%;
+    margin: 20px 0;
+  }
+  
+  h1.saudacao {
+    margin: 20px 10%;
+  }
 }

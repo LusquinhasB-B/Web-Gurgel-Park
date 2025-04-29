@@ -1,5 +1,6 @@
 body{
-    font-family: JetBrains Mono Medium;background-image: url("../img/verde-estacionamento.png") ;
+    font-family: 'JetBrains Mono Medium', Cambria;
+    background-image: url("../img/verde-estacionamento.png") ;
     background-size: cover;
     
 
