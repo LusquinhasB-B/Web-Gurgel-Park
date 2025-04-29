@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurgel Park - Nosso Sistema</title>
+    <link rel="stylesheet" href="{% static 'css/sistema.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>Gurgel</span>
+            <span>Park<span>
+            <span>Dash Vision<span>
+        </div>
+        <nav class="navbar">
+            <a href="{% url 'pagina' %}">Home</a>
+        </nav>
+    </header>
+
+    <main class="pagina-sistema">
+        <h1 class="titulo-sistema">Características do Nosso Sistema</h1>
+        
+        <div class="funcionalidades">
+            <div class="card-funcionalidade">
+                <h3>Sistema de cadastro</h3>
+                <ul>
+                    <li>Cadastro do usuario e do veículo</li>
+                    <li>Mapa interativo de ocupação</li>
+                    <li>Reservas antecipadas</li>
+                    <li>Prioridade para PCD</li>
+                </ul>
+            </div>
+            
+            <div class="card-funcionalidade">
+                <h3>Gestão Financeira</h3>
+                <ul>
+                    <li>Cobrança automática</li>
+                    <li>Múltiplos métodos de pagamento</li>
+                    <li>Relatórios mensais</li>
+                    <li>Integração com contabilidade</li>
+                </ul>
+            </div>
+            
+            <div class="card-funcionalidade">
+                <h3>Segurança</h3>
+                <ul>
+                    <li>Registro de placas</li>
+                    <li>Integração com câmeras</li>
+                    <li>Alertas de permanência</li>
+                    <li>Histórico completo</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="destaque-sistema">
+            <h2>Tecnologia Integrada</h2>
+            <p>Nosso sistema utiliza o sensor de distância <strong>HC-SR04</strong> junto com o micro-controlador <strong>ESP32</strong> integrada ao sistema para um melhor desempenho e demonstração.</p>
+        </div>
+        <div class="destaque-sistema imagem">
+        </div>
+        
+    </main>
+
+    <footer class="rodape">
+        <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy; 2023</p>
+    </footer>
+</body>
+</html>

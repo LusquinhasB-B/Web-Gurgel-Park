@@ -5,5 +5,6 @@ urlpatterns =[
     path('pagina/', views.paginaPrincipal, name='pagina'),
     path('cadastro/', views.cadastro, name='cadastro'),
     path('login/', views.login, name='login'),
+    path('sistema/', views.sistema, name='sistema'),
     path('', views.home, name="home")
 ]

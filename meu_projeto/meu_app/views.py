@@ -92,3 +92,13 @@ def paginaPrincipal(request):
     "<br>" \
     "<a href='/auth/cadastro/'>Ou clique aqui para ir a pagina de cadastro</a>" \
     "")
+
+def sistema(request):
+    if request.user.is_authenticated:
+        return render(request, 'sistema.html')
+    return HttpResponse("Precisa estar LOGADO PARA acessar a página!"
+    "<br>"
+    "<a href='/auth/login/'>Clique aqui para ir a pagina de login </a>" \
+    "<br>" \
+    "<a href='/auth/cadastro/'>Ou clique aqui para ir a pagina de cadastro</a>" \
+    "")
