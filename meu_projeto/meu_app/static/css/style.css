@@ -51,9 +51,8 @@ border-radius: solid 2px #4d8041;
 
 }
 span:hover{
+  transition: 2s;
   border-bottom: solid 1px #4d8041;
-
-
 }
 
 .navbar {
@@ -86,19 +85,22 @@ h1.saudacao{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3px;
-  border-bottom: #4d8041 solid;
+  padding: 3px;
+  text-align: center;
+  border-radius: 10px;
   margin-left: 35%;
   margin-right: 35%;
 }
 h1.saudacao:hover{
-  transition: 2s;
+  transition: 0.5s;
   background-color: #a4cfa0;
-  box-shadow:  6px 6px 1px 1px #000000;
+  box-shadow:  -8px 8px 2px 1px #182616;
 }
-p .texto{
+p{
   text-align: justify;
   color: #000000;
+  text-align: justify;
+  font-size: large;
 }
 
 .bloco{
@@ -126,12 +128,24 @@ p .texto{
     box-shadow: 0 0 10px #bcd2ae;
     margin: 30px;
 }
+.imagem:hover{
+    transition: 2s;
+    border: 3px solid #000;
+    box-shadow: 7px 7px 10px #020202;
+}
 
 .sobre-gurgel{
-  background-image: url("../fundo-estacionamento.jpg");
+  background-image: url("../img/vista-aerea-estacionamento.png");
+  background-size: cover;
+  background-position: center;
 }
-.sobre-sistema{
-  background-image: url('sistema-vagas.webp');
+.sobre-projeto{
+  background-image: url("../img/mao-aplicativo.jpeg");
+
+}
+.sobre-aplicativo{
+  background-image: url("../img/#");
+  background-size: cover;
 
 }
 .texto {
@@ -141,13 +155,23 @@ p .texto{
   font-size: 1.2rem;
   font-weight: bold;
   padding: 20px;
-  background-color: #A3BC93;
+  background-color: #a4cfa0;
   border-radius: 10px;
   border: solid 2px #000000;
+  margin-left: 2%;
+  margin-right: 2%;
+  box-shadow: -12px 12px 2px 1px #182616;
 }
 .texto:hover{
-  box-shadow: -12px 12px 2px 1px #000000;
 }
+.semititulos{
+  margin-top: 2px;
+  padding: 2px;
+  border-bottom: solid 3px #4d8041;
+  
+
+}
+
 
 .intro {
   background-color: #ffffffd6;
@@ -156,14 +180,15 @@ p .texto{
   box-shadow: 0 0 10px #bcd2ae;
 }
 
-
 .rodape{
   display: flex;
   position: fixed;
   padding-left: 35%;
   bottom: 0;
   width: 100%;
-  color: rgb(255, 255, 255);
   margin-top: 10%;
   background-color: #182616;
+}
+p.texto-rodape{
+  color: #fdfde9;
 }
