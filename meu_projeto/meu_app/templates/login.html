@@ -11,11 +11,17 @@
     <main> 
           
         <div class="formulario">
-            <h1>Login</h1>
+            <h1>Bem-vindo à gurgel Park</h1>
             <form action="{% url 'login' %}" method="POST">{% csrf_token %}        
                 <input type="text" placeholder="Usuario..." name="username"> <br>
                 <input type="password" placeholder="Senha" name="senha"> <br>
-                <input type="submit" value="ENTRAR">
+                <input type="submit" name="entrar" value="ENTRAR">
+                <div class="botoes">
+                    <input type="submit" name="irPagina" value="Ir para a página principal"> <br>
+                    <div class="b_cadastro">    
+                        <input type="submit" name="irCadastro" value="Não possui conta?">
+                    </div>
+                </div>
             </form>
         </div>
         <div class="imagem"></div> 
