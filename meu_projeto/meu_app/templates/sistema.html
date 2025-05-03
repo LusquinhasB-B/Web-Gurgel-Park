@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurgel Park - Nosso Sistema</title>
+    <title>Sistema</title>
     <link rel="stylesheet" href="{% static 'css/sistema.css' %}">
 </head>
 <body>
@@ -15,31 +15,31 @@
             <span>Dash Vision<span>
         </div>
         <nav class="navbar">
-            <a href="{% url 'pagina' %}">Home</a>
+            <a href="{% url 'pagina' %}">Pagina Inicial</a>
+            <a href="{% url 'projeto'%}">Projeto</a> 
         </nav>
     </header>
 
     <main class="pagina-sistema">
-        <h1 class="titulo-sistema">Características do Nosso Sistema</h1>
+        <h1 class="titulo-sistema">Características do nosso Sistema</h1>
         
         <div class="funcionalidades">
             <div class="card-funcionalidade">
-                <h3>Sistema de cadastro</h3>
+                <h3>Sensor e Microcontrolador</h3>
                 <ul>
-                    <li>Cadastro do usuario e do veículo</li>
-                    <li>Mapa interativo de ocupação</li>
-                    <li>Reservas antecipadas</li>
-                    <li>Prioridade para PCD</li>
+                    <li>O sensor detecta a presença do véículo.</b></li>
+                    <li>A informação é lida e interpretada pelo <b>ESP32</b>.</li>
+                    <li>O algortimo verifíca e envia essa informação até o  <b>banco de dados</b>.</li>
+                    <li>Ocorre a integração com o <b>banco</b> e o <b>aplicativo</b></li>
                 </ul>
             </div>
-            
             <div class="card-funcionalidade">
-                <h3>Gestão Financeira</h3>
+                <h3> Aplicação Dekstop</h3>
                 <ul>
-                    <li>Cobrança automática</li>
-                    <li>Múltiplos métodos de pagamento</li>
-                    <li>Relatórios mensais</li>
-                    <li>Integração com contabilidade</li>
+                    <li>Integrabilidade com o banco de dados</li>
+                    <li>Cadastro do <b>Usuário</b> e do <b>Veículo</b></li>
+                    <li>Usabilidade fácil do aplicativo</li>
+                    <li>Setor destinado ao financeiro</li>
                 </ul>
             </div>
             
@@ -48,15 +48,16 @@
                 <ul>
                     <li>Registro de placas</li>
                     <li>Integração com câmeras</li>
-                    <li>Alertas de permanência</li>
+                    <li>Possível alertas de permanência</li>
                     <li>Histórico completo</li>
                 </ul>
             </div>
-        </div>
+            </div>
         
         <div class="destaque-sistema">
             <h2>Tecnologia Integrada</h2>
-            <p>Nosso sistema utiliza o sensor de distância <strong>HC-SR04</strong> junto com o micro-controlador <strong>ESP32</strong> integrada ao sistema para um melhor desempenho e demonstração.</p>
+            <p>Nosso sistema utiliza o sensor de distância <strong>HC-SR04</strong> junto com o micro-controlador <strong>ESP32</strong> integrada ao sistema para um melhor desempenho e demonstração. Abaixo, um exemplo do sensor e micro-controlador usado.</p>
+            
         </div>
         <div class="destaque-sistema imagem">
         </div>
@@ -64,7 +65,7 @@
     </main>
 
     <footer class="rodape">
-        <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy; 2023</p>
+        <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025</p>
     </footer>
 </body>
 </html>

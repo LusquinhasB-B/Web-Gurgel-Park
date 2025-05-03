@@ -1,8 +1,7 @@
-/* SEU CSS (com pequenos ajustes para melhor renderização) */
 body{
   margin: 0;
   background-size: cover;
-  font-family: 'JetBrains Mono Medium', 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'JetBrains Mono Medium', 'Cambria';
   background-color: #fdfde9;
   color: #000;
 }
@@ -18,7 +17,7 @@ header{
 
 main { 
   padding: 10px;
-  margin-bottom: 60px; /* Evita conflito com o rodapé fixo */
+  margin-bottom: 60px; 
 }
 
 .logo {
@@ -106,8 +105,8 @@ h1.saudacao:hover {
   background-color: #a4cfa0;
   border-radius: 10px;
   border: 2px dashed #000;
-  box-shadow: -12px 12px 2px 1px #182616;
-  transition: transform 0.3s;
+  box-shadow: -6px 6px 2px 1px #182616;
+  transition: 0.5s;
 }
 p{
   font-size: 20px;
@@ -116,6 +115,8 @@ p{
 }
 .texto:hover {
   transform: translateY(-5px);
+  box-shadow: -12px 12px 3px 2px #182616;
+
 }
 
 .semititulos {
@@ -164,23 +165,9 @@ p{
 }
 
 .texto-rodape {
-  color: #fdfde9 !important;
+  color: #fdfde9;
+  text-align: center;
   margin: 0;
   font-size: 0.9rem;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .bloco, .bloco.invertido {
-    flex-direction: column;
-  }
-  
-  .imagem {
-    width: 90%;
-    margin: 20px 0;
-  }
-  
-  h1.saudacao {
-    margin: 20px 10%;
-  }
-}

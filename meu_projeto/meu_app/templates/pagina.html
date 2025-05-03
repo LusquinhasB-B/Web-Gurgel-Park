@@ -9,14 +9,14 @@
 <body>
     <header>
         <div class="logo">
-            <span>-Gurgel</span>
-            <span> --Parks</span>
-            <span> ---Dash Vision</span>
+            <span>Gurgel</span>
+            <span>Parks</span>
+            <span>Dash Vision</span>
         </div>
         <nav class="navbar">
-            <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'sistema'%}">Sistema</a>
-            
+            <a href="{% url 'projeto'%}">Projeto</a>
+            <a href="{% url 'home' %}">Voltar a Home</a> 
         </nav>
     </header>
     <!-- Aqui vai ficar a parte sobre a empresa -->
@@ -43,16 +43,18 @@
         </section>   
         <section class="bloco">
             <div class="texto">
-                <h2 class="semititulos">Sobre o aplicativo</h2>
-                <p> -> Nosso app permite que usuários reservem vagas antecipadamente, recebam notificações quando o tempo está acabando e paguem diretamente pelo celular. Compatível com Android e iOS, oferece ainda mapas interativos do estacionamento.</p>
-                <p> -> Para administradores, a versão PRO inclui dashboards com gráficos de ocupação, emissão de recibos fiscais e suporte a múltiplos usuários com diferentes níveis de acesso.</p>
+                <h2 class="semititulos">O Sistema</h2>
+                <p> -> Nosso sistema permite que usuários reservem vagas antecipadamente, recebam notificações e alertas e paguem diretamente pelo celular. Compatível com Android e iOS, oferece ainda mapas interativos do estacionamento.</p>
+                <p> -> Nosso sistema funciona semelhante ao Sem Parar, entretanto com uma temática voltada exclusivamente ao serviço de estacionamento</p>
             </div>
             <div class="imagem sobre-aplicativo"></div>
         </section>
     </main>
     <footer>
         <div class="rodape">
-            <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025.</p>
+            <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025. </p>
+            <p class="texto-rodape">-</p>
+            <p class="texto-rodape">Email cadastrado: {{user.email}}</p>
         </div>
     </footer>
 </body>

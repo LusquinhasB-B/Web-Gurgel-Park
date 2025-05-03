@@ -11,16 +11,21 @@
     <main>
         <div class="container">
             <div class="imagem"></div>
-                <div class="formulario">
-                    <h1>CADASTRO</h1>
-                    <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
-                        <input type="text" placeholder="Usuario..." name="username"> <br>
-                        <input type="email" placeholder="Email..." name="email"> <br>
-                        <input type="password" placeholder="Senha..." name="senha"> <br>
-                        <input type="submit" value="CADASTRAR">
-                    </form>
-                </div>
-             
+            <div class="formulario">
+                <h1>CADASTRO</h1>
+                <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
+                    <input type="text" placeholder="Usuario..." name="username"> <br>
+                    <input type="email" placeholder="Email..." name="email"> <br>
+                    <input type="password" placeholder="Senha..." name="senha"> <br>
+                    <input type="submit" value="CADASTRAR">
+                    <div class="botoes">
+                        <input type="submit" name="irPagina" value="Ir para a página principal"> <br>
+                        <div class="b_login">    
+                            <input type="submit" name="irLogin" value="Ja tenho cadastro">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 
