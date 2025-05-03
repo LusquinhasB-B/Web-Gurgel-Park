@@ -31,13 +31,27 @@ def cadastro(request):
         usuario = request.POST.get('username')
         email = request.POST.get('email')
         senha = request.POST.get('senha')
-        
+
+        #---------------Ir para outras telas---------------#
+        irPrincipal = request.POST.get('irPagina')
+        irLogin = request.POST.get('irLogin')
+        if irPrincipal:
+            return redirect('/auth/pagina/')
+        if irLogin:
+            return redirect('/auth/login/')
+    
         if not usuario:
-            return HttpResponse("Usuario não informado")
+            return HttpResponse("Usuario não informado" \
+                                "<br>" \
+                                "<a href='/auth/cadastro/'>Clique aqui para voltar a area de Cadastro</a>   ")
         elif not email:
-            return HttpResponse("email não informado")
+            return HttpResponse("email não informado"
+                                "<br>" \
+                                "<a href='/auth/cadastro/'>Clique aqui para voltar a area de Cadastro</a>   ")
         elif not senha:
-            return HttpResponse("Senha não inserida")
+            return HttpResponse("Senha não inserida" \
+                                "<br>" \
+                                "<a href='/auth/cadastro/'>Clique aqui para voltar a area de Cadastro</a>   ")
 
         # Se ja existe um usuario com o mesmo nome
         user = User.objects.filter(username=usuario).first()
@@ -96,6 +110,15 @@ def paginaPrincipal(request):
 def sistema(request):
     if request.user.is_authenticated:
         return render(request, 'sistema.html')
+    return HttpResponse("Precisa estar LOGADO PARA acessar a página!"
+    "<br>"
+    "<a href='/auth/login/'>Clique aqui para ir a pagina de login </a>" \
+    "<br>" \
+    "<a href='/auth/cadastro/'>Ou clique aqui para ir a pagina de cadastro</a>" \
+    "")
+def projeto(request):
+    if request.user.is_authenticated:
+        return render(request, 'projeto.html')
     return HttpResponse("Precisa estar LOGADO PARA acessar a página!"
     "<br>"
     "<a href='/auth/login/'>Clique aqui para ir a pagina de login </a>" \

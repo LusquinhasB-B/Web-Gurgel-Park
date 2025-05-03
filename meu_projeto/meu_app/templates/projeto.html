@@ -1,0 +1,106 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/projeto.css' %}">
+    <title>Projeto</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>Gurgel</span>
+            <span>Parks</span>
+            <span><b>Dash Vision</b></span>
+        </div>
+        <nav class="navbar">
+            <a href="{% url 'pagina'%}">Pagina Inicial</a>
+            <a href="{% url 'sistema'%}">Sistema</a>
+        </nav>
+    </header>
+
+    <main> 
+        <h1 class="titulo-sistema">Características do Projeto</h1>
+
+        <section class="bloco invertido">
+            <div class="texto texto-invertido">
+                <h2 class="semititulos">Aplicação Desktop</h2>
+                <p> -> O sistema principal do projeto foi realizado na aplicação desktop, desenvolvido em <b>Python</b> com aplicação visual em <b>PyQt5</b>. O aplicativo inclui um sistema completo de cadastro de veiculos e usuários, vizualização de vagas disponíveis, além de outros <b>tipos de serviços</b> e dentre outras aplicações.</p> 
+     
+                <div class="funcionalidades">
+                    <div class="card-funcionalidade">
+                        <h3>COMO FOI ESTRUTURADA?</h3>
+                        <ul>
+                            <li><b>Modelo MVC </b> (Model - View - Controller).</li>
+                            <li>Possui um sistema de <b>autenticacao </b>completo.</li>
+                            <li><b>Querys de SQL</b> do Banco de Dados para automatização.</li>
+                            <li>Link para o repositório: <a  href="https://github.com/DashVision/gurgel-park-desktop"><b>github.com/DashVision/gurgel-park-desktop</b></a></li>
+                        </ul>
+                    </div>
+                    <div class="card-funcionalidade">
+                        <h3>ALGUMAS BIBLIOTECAS USADAS:</h3>
+                        <ul>
+                            <li><b>BRCRYPT</b> - Usada para criptografar senhas de forma segura</li>
+                            <li><b>DOTENV</b> - Usada para carregar variáveis de ambiente de um arquivo '.env' permitindo guardar informações sensíveis ou de configuração fora do código</li>
+                            <li><b>PYDANTIC</b> - Criar modelos de dados estruturados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="imagem sobre-projeto"></div>
+        </section>
+            
+        <section class="bloco">       
+            <div class="texto">
+                <h2 class="semititulos">Aplicação Web</h2>
+                <p>-> A aplicação web demonstrativa foi desenvolvida através do framework <b>Django</b> com o proposito de integrar o backend e o frontend sem complicações, além disso o site foi estrutura e estilizado em <b>HTML5 e CSS3</b></p>
+                <p>-> O propósito do <b>Django</b> foi desenvolver um processo de autenticacao de Cadastro e Login, permitindo o acesso ao site apenas para quem fosse registrado.</p>
+        
+                <div class="funcionalidades">
+
+                    <div class="card-funcionalidade">
+                        <h3>Estruturação</h3>
+                        <ul>
+                            <li>Sistema de rotas (URLS) - '127.0.0:1800/auth/projeto/.</li>
+                            <li>Métodos <b>Users</b> e <b>Autenticate</b>.</li>
+                            <li>Respostas em <b>HttpResponse</b>.</li>
+                            <li>Métodos <b>GET</b> e <b>POST</b>.</li>   
+                        </ul>
+                    </div>
+                    <div class="card-funcionalidade">
+                        <h3>Propósito</h3>
+                        <ul>
+                            <li>Desmonstração do projeto</li>
+                            <li>Exemplos de aplicação do <b>DJANGO</b></b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>      
+            <div class="imagem sobre-web"></div>    
+        </section>   
+        <section class="bloco invertido">
+            <div class="texto texto-invertido">
+                <h2 class="semititulos">Integração com Microcontrolador</h2>
+                <p> -> Falar sobre o objetivo com o sensor e Microcontrolador.</p>
+                <p> -> Falar da Integração com o banco de dados</p>
+            </div>
+            <div class="imagem sobre-micro"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="rodape">
+            <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+</html>
