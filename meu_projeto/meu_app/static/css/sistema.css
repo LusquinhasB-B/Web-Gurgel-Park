@@ -152,11 +152,11 @@ p{
     width: 100%;
     background-color: #182616;
     padding: 15px 0;
-    text-align: center;
 }
 
 .texto-rodape {
     color: #fdfde9 ;
+    text-align: center;
     margin: 0;
     font-size: 0.9rem;
 }

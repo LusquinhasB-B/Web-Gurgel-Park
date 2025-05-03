@@ -34,8 +34,8 @@
                         <h3>COMO FOI ESTRUTURADA?</h3>
                         <ul>
                             <li><b>Modelo MVC </b> (Model - View - Controller).</li>
-                            <li>Possui um sistema de <b>autenticacao </b>completo.</li>
-                            <li><b>Querys de SQL</b> do Banco de Dados para automatização.</li>
+                            <li>Possui um sistema de <b>autenticação</b> completo.</li>
+                            <li><b>Querys de SQL</b> do Banco de Dados para aplicação e armazenamento dos dados.</li>
                             <li>Link para o repositório: <a  href="https://github.com/DashVision/gurgel-park-desktop"><b>github.com/DashVision/gurgel-park-desktop</b></a></li>
                         </ul>
                     </div>
@@ -75,6 +75,8 @@
                         <ul>
                             <li>Desmonstração do projeto</li>
                             <li>Exemplos de aplicação do <b>DJANGO</b></b></li>
+                            <li>Demonstração da utilização HTML com CSS <b>DJANGO</b></b></li>
+                            <li>Link para o repositório: <a  href="https://github.com/DashVision/Web-Gurgel-Park"><b>github.com/DashVision/Web-Gurgel-Park</b></a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,8 +86,29 @@
         <section class="bloco invertido">
             <div class="texto texto-invertido">
                 <h2 class="semititulos">Integração com Microcontrolador</h2>
-                <p> -> Falar sobre o objetivo com o sensor e Microcontrolador.</p>
-                <p> -> Falar da Integração com o banco de dados</p>
+                <p> -> A parte de Microcontrolador foi a responsável pela coleta de dados do projeto para o funcionamento do sistema. Nessa parte foi utilizado um <b>ESP32</b> e um sensor <b>HC-SR04.</b></p>
+                <p>-> Há também uma certa integração com o banco de dados da linguagem <b>SQL</b>, entretanto essa parte está de certa forma implementada no sistema <b>desktop</b>. </p>
+                <div class="funcionalidades">
+
+                    <div class="card-funcionalidade">
+                        <h3>ESTRUTURA</h3>
+                        <ul>
+                            <li><b>Sensor HC-SR04</b> - Sensor de distância, possível detectar com certa precisão até <b>4 metros</b>.</li>
+                            <li><b>ESP32</b> - Microcontrolador com <b>baixo consumo de energia</b> e com <b>conectividade com Wi-Fi</b> , ideal para o nosso projeto</li>
+                            <li><b>Arduino IDE</b> - IDE utilizada para montar o algortimo responsável pela interpretação dos dados.</li>
+                        </ul>
+                    </div>
+                    <div class="card-funcionalidade">
+                        <h3>CONSTRUÇÃO</h3>
+                        <ul>
+                            <li>O sensor fica posicionado de tal forma para detectar o veículo.</li>
+                            <li>O ESP32 e o sensor funcionam de forma autonoma e a informação é enviada através do WiFi </li>
+                            <li>O algortimo reconhece o veículo através da logica de distância do sensor.</li>
+                            <li>Os dados são enviados para o banco de dados para o tratamento.</li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="imagem sobre-micro"></div>
         </section>
@@ -93,6 +116,8 @@
     <footer>
         <div class="rodape">
             <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025.</p>
+            <p class="texto-rodape">-</p>
+            <p style="font-size: 12px;" class="texto-rodape">Email do usuário: {{user.email}}</p>
         </div>
     </footer>
 

@@ -40,6 +40,7 @@ def cadastro(request):
         if irLogin:
             return redirect('/auth/login/')
     
+        # Se os campos não forem preenchidos
         if not usuario:
             return HttpResponse("Usuario não informado" \
                                 "<br>" \
@@ -107,6 +108,7 @@ def paginaPrincipal(request):
     "<a href='/auth/cadastro/'>Ou clique aqui para ir a pagina de cadastro</a>" \
     "")
 
+#----------------------Página Sistema---------------------#
 def sistema(request):
     if request.user.is_authenticated:
         return render(request, 'sistema.html')
@@ -116,6 +118,8 @@ def sistema(request):
     "<br>" \
     "<a href='/auth/cadastro/'>Ou clique aqui para ir a pagina de cadastro</a>" \
     "")
+
+#----------------------Página Projeto---------------------#
 def projeto(request):
     if request.user.is_authenticated:
         return render(request, 'projeto.html')
