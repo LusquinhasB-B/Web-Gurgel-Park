@@ -14,13 +14,16 @@
             <span>Dash Vision</span>
         </div>
         <nav class="navbar">
-            <a href="{% url 'sistema'%}">Sistema</a>
-            <a href="{% url 'projeto'%}">Projeto</a>
-            <a href="{% url 'home' %}">Voltar a Home</a> 
+            <ul>
+                <a href="{% url 'sistema'%}">Sistema</a> ▪ 
+                <a href="{% url 'projeto'%}">Projeto</a> ▪
+                <a href="{% url 'conta' %}">Conta 👤</a>
+            </ul>
         </nav>
     </header>
     <!-- Aqui vai ficar a parte sobre a empresa -->
      <h1 class="saudacao">Seja bem-vindo, {{user.username}}!👋 </h1>
+     <br>
     <main> 
         
         <section class="bloco">       
@@ -36,8 +39,8 @@
         <section class="bloco invertido">
             <div class="texto texto-invertido">
                 <h2 class="semititulos">O Projeto</h2>
-                <p> -> O projeto principal consistiu em criar um sistema  que permite cadastrar e atualizar informações sobre as vagas de estacionamento, facilitando a administração das áreas de estacionamento. Além disso, possui um registro de entradas e saídas permite que a cada movimentação de veículos, o sistema registra as entradas e saídas, associando cada evento ao cliente correspondente. </p>
-                <p> -> Desenvolvido em <strong>Python, PyQt5, HTML, CSS</strong> e dentre outras tecnologias inclusas</p>
+                <p> -> O projeto principal consistiu em criar um sistema  que permite cadastrar e atualizar informações sobre as vagas de estacionamento, facilitando a administração das áreas de estacionamento. Além disso, consistiu na contrução de um registro de entradas e saídas, ocupação das vagas, dentroe outras aplicações permitindo que a cada movimentação de veículos, o sistema registra as entradas e saídas, associando cada evento ao cliente correspondente. </p>
+                <p> -> Desenvolvido em diversas tecnologias como <strong>Python, PyQt5, HTML, CSS</strong> além da integração com o <strong>microcontrolador.</strong></p>
             </div>
             <div class="imagem sobre-projeto"></div>
         </section>   
@@ -45,7 +48,7 @@
             <div class="texto">
                 <h2 class="semititulos">O Sistema</h2>
                 <p> -> Nosso sistema permite que usuários reservem vagas antecipadamente, recebam notificações e alertas e paguem diretamente pelo celular. Compatível com Android e iOS, oferece ainda mapas interativos do estacionamento.</p>
-                <p> -> Nosso sistema funciona semelhante ao Sem Parar, entretanto com uma temática voltada exclusivamente ao serviço de estacionamento</p>
+                <p> -> Nosso sistema funciona semelhante ao Sem Parar, entretanto com uma temática voltada exclusivamente ao serviço de estacionamento e incluindo beneficíos ao cliente</p>
             </div>
             <div class="imagem sobre-aplicativo"></div>
         </section>
@@ -53,8 +56,7 @@
     <footer>
         <div class="rodape">
             <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025. </p>
-            <p class="texto-rodape">-</p>
-            <p style="font-size: 12px;" class="texto-rodape">Email do usuário: {{user.email}}</p>
+
         </div>
     </footer>
 </body>

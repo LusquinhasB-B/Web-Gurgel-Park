@@ -16,8 +16,9 @@
             <span><b>Dash Vision</b></span>
         </div>
         <nav class="navbar">
-            <a href="{% url 'pagina'%}">Pagina Inicial</a>
-            <a href="{% url 'sistema'%}">Sistema</a>
+            <a href="{% url 'pagina'%}">Pagina Inicial</a> ▪
+            <a href="{% url 'sistema'%}">Sistema</a> ▪
+            <a href="{% url 'conta' %}">Conta 👤</a>
         </nav>
     </header>
 
@@ -115,9 +116,7 @@
     </main>
     <footer>
         <div class="rodape">
-            <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025.</p>
-            <p class="texto-rodape">-</p>
-            <p style="font-size: 12px;" class="texto-rodape">Email do usuário: {{user.email}}</p>
+            <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025.</p>  
         </div>
     </footer>
 

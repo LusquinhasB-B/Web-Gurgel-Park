@@ -11,12 +11,15 @@
     <header>
         <div class="logo">
             <span>Gurgel</span>
-            <span>Park<span>
-            <span>Dash Vision<span>
+            <span>Park</span>
+            <span>Dash Vision</span>
         </div>
         <nav class="navbar">
-            <a href="{% url 'pagina' %}">Pagina Inicial</a>
-            <a href="{% url 'projeto'%}">Projeto</a> 
+            <a href="{% url 'pagina' %}">Pagina Inicial</a> ▪
+            <a href="{% url 'projeto'%}">Projeto</a> ▪
+            <a href="{% url 'login' %}">Início ↩ </a> ▪
+            <a href="{% url 'conta' %}">Conta 👤</a>
+             
         </nav>
     </header>
 
@@ -25,7 +28,7 @@
         
         <div class="funcionalidades">
             <div class="card-funcionalidade">
-                <h3>Detecção da informação</h3>
+                <h3>Ocupação de vaga</h3>
                 <ul>
                     <li>O sensor detecta a presença do véículo.</b></li>
                     <li>A informação é lida e interpretada pelo <b>ESP32</b>.</li>
@@ -59,16 +62,30 @@
             <p>Nosso sistema utiliza o sensor de distância <strong>HC-SR04</strong> junto com o micro-controlador <strong>ESP32</strong> integrada ao sistema para um melhor desempenho e demonstração. Abaixo, um exemplo do sensor e micro-controlador usado.</p>
             
         </div>
-        <div class="destaque-sistema imagem">
+        <div class="destaque-sistema imagem"></div>
+        <div class="destaque-sistema">
+            <h2>Funcionamento do sensor</h2>
+            <p>Abaixo segue um vídeo explicando sobre a funcionalidade do sensor <strong>HC-SR04</strong> e como aplica-lo em projetos pessoais: </p>
+            
+        </div>
+        <div style="border: 2px solid #313f30; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; margin: 30px auto; max-width: 900px;">
+
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/QmyByyhiiwk" 
+                title="O que é um sensor ultrassônico (HC-SR04) | Como funciona | Projeto Arduino" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                style="position:absolute; top:0; left:0; width:100%; height:100%;">
+            </iframe>
         </div>
         
     </main>
 
     <footer> 
         <div class="rodape">
-            <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025</p>
-            <p class="texto-rodape">-</p>
-            <p style="font-size: 12px;" class="texto-rodape">Email do usuário: {{user.email}}</p>
+            <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025.</p>
+
         </div>
     </footer>
 </body>
