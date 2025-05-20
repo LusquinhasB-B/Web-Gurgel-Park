@@ -12,7 +12,7 @@ header{
   align-items: center;
   background-color: #fdfde9;
   padding: 20px 40px;
-  border-bottom: 6px solid #a4cfa0;
+  border-bottom: 6px solid #262e21;
 }
 
 main { 
@@ -44,33 +44,40 @@ main {
   z-index: -1;
   border-radius: 3px;
 }
-
-.navbar {
-  display: flex;
-  gap: 30px;
-}
-
 .navbar a {
   text-decoration: none;
   font-weight: bold;
-  color: #000;
+  color: #000000;
   position: relative;
   font-size: 1.1rem;
-} 
-
-.navbar a::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  height: 3px;
-  width: 0;
-  background-color: #4d8041;
-  transition: width 0.3s;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  display: inline-block;
 }
 
-.navbar a:hover::after {
-  width: 100%;
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #fdfde9;
+  background-color: #a4cfa0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a:hover::before {
+  border-color: #182616;
 }
 
 h1.saudacao {
@@ -104,7 +111,7 @@ h1.saudacao:hover {
   margin: 0 20px;
   background-color: #a4cfa0;
   border-radius: 10px;
-  border: 2px dashed #000;
+  border: 2px solid #000;
   box-shadow: -6px 6px 2px 1px #182616;
   transition: 0.5s;
 }
@@ -170,3 +177,18 @@ p{
   font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+  .bloco, .bloco.invertido {
+    flex-direction: column;
+  }
+  
+  .imagem {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  
+  .texto {
+    margin: 0 10px;
+  }
+}

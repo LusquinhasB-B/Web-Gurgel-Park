@@ -15,6 +15,7 @@ h1{
   text-align: center
 }
 
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -35,7 +36,7 @@ h1{
   form input[type="text"],
   form input[type="email"],
   form input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 8px 0;
     border: 2px solid #313f30;
@@ -67,6 +68,14 @@ h1{
   }
   .botoes {
     margin-top: 40px;
+  }
+  .voltar-login{
+    display: flex;
+    margin-top: 20px;
+    width: 220px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
   }
   form input[name="irCadastro"]{
     background-color: #eb663e; 
