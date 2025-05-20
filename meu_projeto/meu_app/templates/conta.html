@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Conta</title>
+  <link rel="stylesheet" href="{% static 'css/conta.css' %}">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span>Gurgel </span>
+      <span>Park</span>
+      <span>Dash Vision</span>
+    </div>
+    <div class="navbar">
+        <ul>
+            <a href="{% url 'pagina' %}">Pagina Inicial </a> ▪
+            <a href="{% url 'login' %}">Voltar à Home ↩ </a>
+        </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="formulario">
+      <h1>Informações da Conta</h1>
+
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Nickname:</strong> {{ user }}</p>
+      <p>◾</p>
+
+      <a class="botao" href="{% url 'redefinir_senha' %}">Redefinir Senha</a>
+      <a class="botao editar" href="{% url 'atualizar_email' %}">Editar Email</a> <!-- você pode criar essa view depois -->
+      <a class="botao sair" href="{% url 'deslogar' %}">Sair da conta</a>
+
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p class="texto-rodape">Todos os direitos reservados à Gurgel Park &copy 2025. 
+    </p>
+  </footer>
+
+</body>
+</html>
