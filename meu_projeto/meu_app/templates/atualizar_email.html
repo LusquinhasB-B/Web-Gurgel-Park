@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar Email</title>
+    <link rel="stylesheet" href="{% static 'css/conta.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>Gurgel</span>
+            <span>Park</span>
+            <span>Dash Vision</span>
+        </div>
+        <div class="navbar">
+            <a href="{% url 'pagina' %}">Pagina inicial</a>
+            <a href="{% url 'login' %}">Voltar à home</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="formulario">
+            <h1>Atualizar Email</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="botao">Salvar</button>
+            </form>
+            <a class="botao editar" href="{% url 'conta' %}">Cancelar</a>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p class="texto-rodape">© 2025 Gurgel Park. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
