@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
-from django.contrib import messages
 from django.contrib.auth import login as login_django
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth.models import User
@@ -53,31 +52,29 @@ def cadastro(request):
                 'titulo': 'Erro de cadastro',
                 'mensagem': 'USUÁRIO NÃO INFORMADO!',
                 'link': '/GurgelPark/cadastro/'
-})
+            })
         elif not email:
             return render(request, 'erro.html', {
                 'titulo': 'Erro de cadastro',
                 'mensagem': 'EMAIL NÃO INFORMADO!',
                 'link': '/GurgelPark/cadastro/'
-})
+            })
 
         elif not senha:
             return render(request, 'erro.html', {
                 'titulo': 'Erro de cadastro',
                 'mensagem': 'SENHA NÃO INFORMADA!',
                 'link': '/GurgelPark/cadastro/'
-})
-
-
+            })
+        
         # Se ja existe um usuario com o mesmo nome
-        user = User.objects.filter(username=usuario).first()
- 
+        user = User.objects.filter(username=usuario).first() 
         if user:
             return render(request, 'erro.html', {
                 'titulo': 'Usuário já existente',
                 'mensagem': 'Utilize outro nickname!',
                 'link': '/GurgelPark/cadastro/'
-})
+            })
 
         
         #Pede para criar com outro nome
@@ -128,7 +125,7 @@ def login(request):
                 'titulo': 'Erro de Login',
                 'mensagem': 'Usuário ou senha inválidos!',
                 'link': '/GurgelPark/login/'
-})
+            })
 
 
 
